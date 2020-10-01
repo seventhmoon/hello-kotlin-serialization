@@ -12,8 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val textviewText = findViewById<TextView>(R.id.textview_text)
-        val json = "{brand:\"Google\",model=\"Pixel\"}"
-
+        val json = "{\"brand\":\"Google\",\"name\":\"Pixel\"}"
         val device = Json { ignoreUnknownKeys = true }.decodeFromString<Device>(json)
 
         textviewText.text = device.toString()
